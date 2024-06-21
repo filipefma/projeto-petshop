@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  color: #263138;
+}
+
+header {
+  background-color: #FF9A6C;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 80px;
+}
+
+header nav a {
+  color: #fff;
+  padding: 27px 32px;
+  font-weight: 600;
+  text-decoration: none;
+}
+header nav a:hover {
+  color: #FF725E;
+  background-color: #fff;
+  transition: .2s;
+}
+
+#start {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 24px 80px 128px 80px;
+  position: relative; /*os elementos que estarão dentro desta tag, ficarão posicionados em relação a este elemento */
+}
+
+h1, h2 {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.paragraph {
+  line-height: 150%;
+  margin-bottom: 32px;
+}
+.btn {
+  background-color: #FF725E;
+  padding: 16px 32px;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: #FF9A6C;
+}
+.btn-transparent {
+  background-color: transparent;
+  padding: 16px 32px;
+  color: #FF725E;
+  text-underline-offset: 4px;
+}
+.btn-transparent:hover {
+  font-weight: 600;
+}
+
+.absolute-image {
+  position: absolute; /*como colocamos na section 'position relative', usamos agora o 'absolute aqui para determinar a posição em que queremos este objeto. Então abaixo colocamos o 'bottom' e 'left'. */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -10;
+}
+
+#clinic {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding: 64px 80px;
+}
+#clinic img {
+  width: 480px;
+  height: 480px;
+}
+#clinic li {
+  margin-bottom: 16px;
+  margin-left: 32px;
+}
+
+#drugstore {
+  padding: 64px 80px;
+  text-align: center;
+}
+#drugstore img {
+  margin: 64px auto;
+  width: 645px;
+  height: 430px;
+}
+#drugstore p {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#doubts {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding: 64px 80px;
+}
+.faq {
+  position: relative;
+}
+.faq h3 {
+  border: 2px solid #FF725E;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 24px;
+}
+.faq h3:hover {
+  background-color: rgba(255, 152, 108, 0.1);
+}
+.faq img {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+}
+.faq .paragraph {
+  border-right: 1px solid #FF725E;
+  border-bottom: 1px solid #FF725E;
+  border-left: 1px solid #FF725E;
+  border-radius: 0 0 8px 8px;
+  margin-top: -8px;
+  padding: 0 24px;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.faq.active .paragraph {
+  height: fit-content;
+  opacity: 1;
+  padding: 24px;
+}
+
+footer {
+  background-color: rgba(255, 152, 108, 0.25);
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 64px 80px;
+}
+footer img, footer .title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+footer nav a {
+  color: #263138;
+  display: block;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+footer nav a:hover {
+  color: #FF725E;
+  /* text-decoration: underline;
+  text-underline-offset: 4px; */
+}
+footer p {
+  margin-bottom: 16px;
+  max-width: 350px;
+}
+footer p a {
+  color: #263138;
+  text-decoration: none;
+}
+footer p a:hover {
+  color: #FF725E;
+}
+
+#copyright {
+  background-color: #263138;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+}
+#copyright a {
+  text-decoration: none;
+  color: #FF9A6C;
+}
+#copyright a:hover {
+  text-decoration: none;
+  color: #FF725E;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  header {
+    padding: 8px 20px;
+  }
+  header nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 8px;
+    }
+  header nav a:hover {
+    color: #FF725E;
+  }
+
+  h1, h2 {
+    margin-bottom: 16px;
+  }
+
+  #start {
+    flex-direction: column;
+    gap: 32px;
+    padding: 48px 32px 48px 32px;
+    text-align: center;
+  }
+  #start img {
+    width: 350px;
+    height: 350px;
+  }
+  .absolute-image {
+    top: 160px;
+  }
+  #start div a {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #clinic {
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px 32px;
+    text-align: center;
+  }
+  #clinic img {
+    width: 350px;
+    height: 350px;
+
+  }
+  #clinic li {
+    margin-bottom: 16px;
+    margin-left: 24px;
+    text-align: left;
+  }
+
+  #drugstore {
+    justify-items: center;
+    padding: 48px 24px;
+  }
+  #drugstore img {
+    margin: 12px auto;
+    width: 350px;
+    height: 233.33px;
+  }
+
+  #doubts {
+    flex-direction: column;
+    gap: 32px;
+    padding: 48px 24px;
+  }
+  #doubts h2 {
+    text-align: center;
+  }
+  #img-faq {
+    width: 350px;
+    height: 350px;
+  }
+  .faq h3 {
+    padding: 16px;
+  }
+  .faq img {
+    position: absolute;
+    top: 32px;
+    right: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 32px 40px;
+  }
+  footer img, footer .title {
+    margin-bottom: 24px;
+  }
+  footer nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer nav a {
+    margin-bottom: 12px;
+  }
+  footer p {
+    margin-bottom: 12px;
+    max-width: 350px;
+  }
+  footer p a {
+    color: #263138;
+    text-decoration: none;
+  }
+}
